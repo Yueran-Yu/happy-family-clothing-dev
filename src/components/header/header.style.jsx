@@ -18,20 +18,25 @@ export const HeaderWrapper = styled.div`
 `
 
 export const LogoWrapper = styled(Link)`
-  height: 100%;
+  height: 70px;
   width: 70px;
-  padding: 25px;
-
-  .logo {
-    fill: #a4a4a4;
-    stroke: #072483;
-    height: 40px;
-    width: 40px;
-  }
+  display: block;
+  
 
   @media screen and (max-width: 800px) {
     width: 50px;
     padding: 0;
+  }
+`
+
+export const LogoDiv = styled.div`
+  width: 50px;
+  height: 50px;
+
+  .logo {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
   }
 `
 

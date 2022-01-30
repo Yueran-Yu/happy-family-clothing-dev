@@ -2,7 +2,7 @@ import React from 'react';
 import './checkout-item.styles';
 import {Wrapper} from "./checkout-item.styles";
 import {connect} from 'react-redux';
-import {clearItemFormCart, addItem, removeItem} from "../../redux/cart/cart.actions";
+import {clearItemFromCart, addItem, removeItem} from "../../redux/cart/cart.actions";
 
 const CheckoutItem = ({cartItem, clearItem, addItem, removeItem}) => {
 
@@ -25,7 +25,7 @@ const CheckoutItem = ({cartItem, clearItem, addItem, removeItem}) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  clearItem: item => dispatch(clearItemFormCart(item)),
+  clearItem: item => dispatch(clearItemFromCart(item)),
   addItem: item => dispatch(addItem(item)),
   removeItem: item => dispatch(removeItem(item))
 })

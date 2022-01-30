@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    width: 100%;
+    width: 850px;
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
-    flex-wrap: wrap;
 `
 
 export default Wrapper;
