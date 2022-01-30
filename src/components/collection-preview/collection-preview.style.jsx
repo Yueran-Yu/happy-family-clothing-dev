@@ -4,7 +4,7 @@ export const CollectionPreviewWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
-  
+
   @media screen and (max-width: 800px) {
     align-items: center;
   }
@@ -16,7 +16,7 @@ export const TitleWrapper = styled.h1`
   cursor: pointer;
 
   &:hover {
-    color: grey;
+    color: #a45d06;
   }
 `
 

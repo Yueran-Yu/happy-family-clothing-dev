@@ -52,13 +52,12 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px dashed black;
-  background-color: white;
+  background-color: #ef7220;
   opacity: 0.7;
   position: absolute;
 
   @media screen and (max-width: 800px) {
-    
+
   }
 `;
 
@@ -66,10 +65,12 @@ export const ContentTitle = styled.span`
   font-weight: bold;
   margin: 0 6px 0;
   font-size: 22px;
-  color: #4a4a4a;
+  color: #f8f6f6;
 `
 
 export const ContentSubtitle = styled.span`
-  font-weight: lighter;
+  font-weight: bolder;
   font-size: 16px;
+  color: #f8f6f6;
+
 `

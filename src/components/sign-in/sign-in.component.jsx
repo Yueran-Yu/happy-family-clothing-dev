@@ -1,7 +1,8 @@
 import React from 'react';
 import FormInput from '../form-input/form-input.component';
-import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
+import {auth, signInWithGoogle} from '../../firebase/firebase.utils';
 import CustomButton from "../custom-button/custom-button.compnent";
+import {ButtonBarWrapper, OptionLink, PTag, SignInTitle, SignInWrapper, SignUpWrapper} from "./sign-in.style";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -16,27 +17,27 @@ class SignIn extends React.Component {
   handleSubmit = async event => {
     event.preventDefault();
 
-    const { email, password } = this.state;
+    const {email, password} = this.state;
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      this.setState({ email: '', password: '' });
+      this.setState({email: '', password: ''});
     } catch (error) {
       console.log(error);
     }
   };
 
   handleChange = event => {
-    const { value, name } = event.target;
+    const {value, name} = event.target;
 
-    this.setState({ [name]: value });
+    this.setState({[name]: value});
   };
 
   render() {
     return (
-      <div className='sign-in'>
-        <h2>I already have an account</h2>
-        <span>Sign in with your email and password</span>
+      <SignInWrapper>
+        <SignInTitle>I already have an account</SignInTitle>
+        <PTag>Sign in with your email and password</PTag>
 
         <form onSubmit={this.handleSubmit}>
           <FormInput
@@ -55,14 +56,17 @@ class SignIn extends React.Component {
             label='password'
             required
           />
-          <div className='buttons'>
+          <ButtonBarWrapper>
             <CustomButton type='submit'> Sign in </CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
-              Sign in with Google
+              Google Sign In
             </CustomButton>
-          </div>
+          </ButtonBarWrapper>
+          <SignUpWrapper>Don't have an account?
+            <OptionLink to='/signup'>{''}Sign Up</OptionLink>
+          </SignUpWrapper>
         </form>
-      </div>
+      </SignInWrapper>
     );
   }
 }

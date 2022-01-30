@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.compnent";
-import {SignUpWrapper, SignUpTitle} from "./sign-up.style";
+import {SignUpWrapper, SignUpTitle, SignUpBtn} from "./sign-up.style";
 import {PTag} from "../sign-in/sign-in.style";
 import {auth, createUserProfileDocument} from "../../firebase/firebase.utils";
 
@@ -78,7 +77,7 @@ class SignUp extends Component {
                      value={confirmPassword}
                      onChange={this.handleChange}
                      label='Confirm Password' required/>
-          <CustomButton type='submit'>SIGN UP</CustomButton>
+          <SignUpBtn type='submit'>SIGN UP</SignUpBtn>
         </form>
       </SignUpWrapper>
     )

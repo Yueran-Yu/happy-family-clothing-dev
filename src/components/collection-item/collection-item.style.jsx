@@ -8,8 +8,8 @@ export const CollectionItemWrapper = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
-  padding:0 10px;
-  
+  padding: 0 10px;
+
   &:hover {
     .image {
       opacity: 0.8;
@@ -69,7 +69,7 @@ export const CollectionFooterContainer = styled.div`
   height: 5%;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 70px;
 `
 

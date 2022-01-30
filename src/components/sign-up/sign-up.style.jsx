@@ -5,17 +5,27 @@ export const SignUpWrapper = styled.div`
   margin: 30px auto;
   padding: 0 30px;
   position: relative;
+`
 
-  button {
-    font-size: 14px;
-  }
-
-
-  button {
-    position: absolute;
-    left: 27.5%;
-    margin: 0;
-  }
+export const SignUpBtn = styled.button`
+  min-width: 165px;
+  width: auto;
+  height: 40px;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+  padding: 0 5px 0 5px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  
 `
 
 export const SignUpTitle = styled.h2`

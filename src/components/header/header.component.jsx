@@ -8,8 +8,11 @@ import {selectCartHidden} from '../../redux/cart/cart.selectors'
 import {selectCurrentUser} from "../../redux/user/user.selectors";
 import {auth} from "../../firebase/firebase.utils";
 import {Logo} from "./logo";
+import {useWindowSize} from "../hooks/useWindowSize";
 
 const Header = ({currentUser, hidden}) => {
+  const {width} = useWindowSize()
+
   return (
     <HeaderWrapper>
       <LogoWrapper to='/'>
@@ -18,13 +21,19 @@ const Header = ({currentUser, hidden}) => {
         </LogoDiv>
       </LogoWrapper>
       <OptionsWrapper>
-        <p> {currentUser ? (`Welcome,${currentUser.displayName}`) : ''}</p>
+        {
+          width <= 600 ? '' :
+            (<p> {currentUser ? (`Welcome,${currentUser.displayName}`) : ''}</p>)
+        }
         <OptionLink to='/shop'>
           SHOP
         </OptionLink>
-        <OptionLink to='/contactUs'>
-          CONTACT
-        </OptionLink>
+        {
+          width <= 600 ? '' :
+            (<OptionLink to='/contactUs'>
+              CONTACT
+            </OptionLink>)
+        }
         {
           currentUser ?
             <div onClick={() => auth.signOut()}>SIGN OUT</div> :

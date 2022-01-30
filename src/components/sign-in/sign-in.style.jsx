@@ -34,7 +34,6 @@ export const ButtonBarWrapper = styled.div`
     flex-direction: column;
   }
 `
-
 export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
@@ -45,4 +44,5 @@ export const SignUpWrapper = styled.div`
   margin: 10px 0;
   text-align: center;
 `
+
 
