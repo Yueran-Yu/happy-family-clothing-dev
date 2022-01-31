@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
   padding: 20px;
   border: 1px solid black;
   background-color: white;
-  top: 50px;
-  right: 14%;
+  top: 80px;
+  right: 10%;
   z-index: 5;
 `
 
@@ -19,7 +19,7 @@ export const CartItems = styled.div`
   display: flex;
   flex-direction: column;
   overflow: auto;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 
   ::-webkit-scrollbar {
     display: none;

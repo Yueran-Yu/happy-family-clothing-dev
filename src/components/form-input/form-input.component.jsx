@@ -8,7 +8,6 @@ const FormInput = ({handleChange, label, ...otherProps}) => (
       label ? (<FormInputLabel
         className={`${otherProps.value ? 'shrink' : ''} form-input-label`}>{label}</FormInputLabel>) : null
     }
-  </GroupContainer>
-)
+  </GroupContainer>)
 
 export default FormInput;

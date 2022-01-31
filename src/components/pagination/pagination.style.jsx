@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     list-style: none;
     display: flex;
     justify-content: start;
-    margin-left: 5%;
+    margin-left: 8%;
 
     @media screen and (max-width: 800px) {
       justify-content: center;
